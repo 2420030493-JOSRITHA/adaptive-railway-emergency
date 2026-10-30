@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RailSafe Passenger Evacuation Pocket Card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090d16;
+      --card: #111827;
+      --border: #1f2937;
+    }
+    body {
+      background: var(--bg);
+      color: #f3f4f6;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      padding: 2rem 1rem;
+      display: flex;
+      justify-content: center;
+    }
+    .pass-card {
+      max-width: 480px;
+      width: 100%;
+      background: #0f172a;
+      border: 2px solid #334155;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+    }
+    .header {
+      background: linear-gradient(135deg, #b91c1c, #991b1b);
+      padding: 1.25rem 1.5rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .content { padding: 1.5rem; }
+    .row {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid #1e293b;
+      font-size: 0.875rem;
+    }
+    .row-label { color: #94a3b8; }
+    .row-val { font-weight: 700; color: #f8fafc; }
+    .helpline-box {
+      background: #1e293b;
+      border-radius: 12px;
+      padding: 1rem;
+      margin: 1.25rem 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      text-align: center;
+    }
+    .helpline-item {
+      background: #0f172a;
+      border: 1px solid #334155;
+      padding: 0.75rem;
+      border-radius: 8px;
+    }
+    .helpline-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #38bdf8;
+    }
+    .action-btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: #dc2626;
+      color: white;
+      text-decoration: none;
+      font-weight: 800;
+      padding: 0.85rem;
+      border-radius: 10px;
+      margin-top: 1rem;
+      box-shadow: 0 4px 6px -1px rgba(220, 38, 38, 0.5);
+    }
+    .print-btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: #1e293b;
+      color: #cbd5e1;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.6rem;
+      border-radius: 8px;
+      margin-top: 0.5rem;
+      border: 1px solid #334155;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="pass-card">
+    <div class="header">
+      <div>
+        <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.9;">Official Railway Safety Document</div>
+        <h2 style="font-size: 1.2rem; font-weight: 800;">Emergency Evacuation Pass</h2>
+      </div>
+      <span style="font-size: 1.8rem;">🎫</span>
+    </div>
+
+    <div class="content">
+      <div class="row">
+        <span class="row-label">Train Number / Name:</span>
+        <span class="row-val">12952 / Tejas Rajdhani</span>
+      </div>
+      <div class="row">
+        <span class="row-label">Designated Coach:</span>
+        <span class="row-val" style="color: #f59e0b;">Coach B6 (AC 3-Tier)</span>
+      </div>
+      <div class="row">
+        <span class="row-label">Allocated Seat/Berth:</span>
+        <span class="row-val">Berth 28 (Middle Berth)</span>
+      </div>
+      <div class="row">
+        <span class="row-label">Primary Safe Exit:</span>
+        <span class="row-val" style="color: #10b981;">Door 1 (Front-Left, 6.2m)</span>
+      </div>
+      <div class="row">
+        <span class="row-label">Secondary Breakout:</span>
+        <span class="row-val">Window 2 (Bay 4 Hammer Station)</span>
+      </div>
+
+      <!-- Helplines -->
+      <div class="helpline-box">
+        <div class="helpline-item">
+          <div style="font-size: 0.7rem; color: #94a3b8; font-weight: bold;">ALL-INDIA HELPLINE</div>
+          <div class="helpline-num">139</div>
+          <div style="font-size: 0.65rem; color: #64748b;">Toll-Free 24x7</div>
+        </div>
+        <div class="helpline-item">
+          <div style="font-size: 0.7rem; color: #94a3b8; font-weight: bold;">RPF SECURITY</div>
+          <div class="helpline-num" style="color: #f59e0b;">182</div>
+          <div style="font-size: 0.65rem; color: #64748b;">Train Escort</div>
+        </div>
+      </div>
+
+      <div style="background: #020617; border: 1px dashed #334155; border-radius: 12px; padding: 1rem; text-align: center;">
+        <div style="font-size: 0.75rem; color: #94a3b8; margin-bottom: 0.5rem; font-weight: 600;">PASSENGER SOS QR VERIFICATION</div>
+        <svg width="120" height="120" viewBox="0 0 100 100" style="margin: 0 auto; display: block; background: white; padding: 6px; border-radius: 8px;">
+          <!-- SVG QR Pattern -->
+          <rect width="100" height="100" fill="white" />
+          <path d="M10,10 h25 v25 h-25 z M15,15 h15 v15 h-15 z M20,20 h5 v5 h-5 z" fill="#0f172a" />
+          <path d="M65,10 h25 v25 h-25 z M70,15 h15 v15 h-15 z M75,20 h5 v5 h-5 z" fill="#0f172a" />
+          <path d="M10,65 h25 v25 h-25 z M15,70 h15 v15 h-15 z M20,75 h5 v5 h-5 z" fill="#0f172a" />
+          <rect x="40" y="15" width="20" height="5" fill="#0f172a" />
+          <rect x="45" y="25" width="10" height="10" fill="#0f172a" />
+          <rect x="40" y="40" width="20" height="20" fill="#0f172a" />
+          <rect x="15" y="45" width="15" height="10" fill="#0f172a" />
+          <rect x="70" y="45" width="15" height="10" fill="#0f172a" />
+          <rect x="45" y="65" width="40" height="5" fill="#0f172a" />
+          <rect x="50" y="75" width="15" height="15" fill="#0f172a" />
+          <rect x="75" y="75" width="10" height="15" fill="#0f172a" />
+        </svg>
+        <div style="font-size: 0.7rem; color: #64748b; margin-top: 6px;">Scannable by TTE &amp; RPF First Responders</div>
+      </div>
+
+      <a href="/" class="action-btn">&larr; Return to Interactive App</a>
+      <button class="print-btn" onclick="window.print()">🖨️ Print Evacuation Card</button>
+    </div>
+  </div>
+</body>
+</html>

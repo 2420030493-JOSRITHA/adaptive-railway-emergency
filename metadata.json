@@ -1,0 +1,7 @@
+{
+  "name": "Adaptive Railway Emergency Management",
+  "description": "Real-time railway emergency management system featuring passenger SOS buzzer, live broadcast push notifications, interactive coach exit door safety navigator, and staff response dispatch center.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
